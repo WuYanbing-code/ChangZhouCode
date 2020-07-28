@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				text-decoration: none;
+			}
+			.slider,slider-main,.slider li,.slider img,.slider-extra{
+				width: 600px;
+				height: 413px;
+			}
+			.slider{
+				margin: 30px auto;
+				position: relative;
+			}
+			.slider ul{
+				list-style: none;
+			}
+			.slider li{
+				position: absolute;
+				z-index: -1;
+			}
+			.slider-extra li{
+				position: static !important;
+				width: 20px;
+				height: 20px;
+			}
+			.slider-extra{
+				position: relative;
+			}
+			.slider-extra a{
+				position: absolute;
+				top: 150px;
+				width: 30px;
+				height: 80px;
+				background-color: rgba(255,255,255,.5);
+				text-align: center;
+				line-height: 80px;
+				font-weight: 900;
+				
+			}
+			.slider-extra a:first-child{
+				left: 0;
+			}
+			.slider-extra a:last-child{
+				right: 0;
+			}
+			.slider-extra ul{
+				position: absolute;
+				width: 200px;
+				bottom: 20px;
+				left: 200px;
+				display: flex;
+				justify-content: space-around;
+				
+			}
+			.slider-extra ul>li{
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 30px;
+				color: white;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="slider">
+			<div class="slider-main">
+				<ul>
+					<li><a href="#"><img src="assets/1.jpg" alt=""></a></li>
+					<li><a href="#"><img src="assets/2.jpg" alt=""></a></li>
+					<li><a href="#"><img src="assets/1.jpg" alt=""></a></li>
+					<li><a href="#"><img src="assets/2.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="slider-extra">
+				<a href="" class="pre"><</a>
+				
+				<ul>
+					<li class="numlist">1</li>
+					<li class="numlist">2</li>
+					<li class="numlist">3</li>
+					<li class="numlist">4</li>
+				</ul>
+				<a href="" class="next">></a>
+			</div>
+		</div>
+	</body>
+</html>
