@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>闭包</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var name1 = 'wuyanbing1';
+			function getName(){
+				var name = 'wuyanbing';
+				return {
+					fun1:function(){
+						var name;
+						console.log(name1)
+						name = 'h1';
+					},
+					fun2:function(){
+						console.log(name)
+					}
+				}
+			}
+			console.log(getName().fun1())
+		</script>
+	</body>
+</html>
