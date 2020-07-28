@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子阴影</title>
+		<style type="text/css">
+			.boxshadow{
+				width: 300px;
+				height: 500px;
+				/* x轴位偏移,y位偏移,模糊度,内外阴影设置，颜色 */
+				/* box-shadow: 10px 10px 10px inset red; */
+				transition: all 5s cubic-bezier(0.25, 0.1, 0.25, 0.8);
+			}
+			.boxshadow:hover{
+				box-shadow: 10px 10px 10px  red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boxshadow"></div>
+	</body>
+</html>
