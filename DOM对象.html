@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM操作</title>
+		<style type="text/css">
+			.dombox{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/* box-shadow: 1px 1px 10px #eee; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dombox" id="idbox"></div>
+		<script type="text/javascript">
+			var dombox = document.getElementsByClassName('dombox')[0];
+			var idbox = document.getElementById('idbox');
+			console.log(dombox);
+			console.log(idbox);
+			var index = true;
+			dombox.addEventListener('click',function(){
+				if(index){
+					dombox.style.backgroundColor = 'blue';
+					index = false;
+				}else{
+					dombox.style.backgroundColor = 'red';
+					index = true
+				}
+				
+			})
+		</script>
+	</body>
+</html>
