@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子阴影</title>
+		<style type="text/css">
+			.boxShadow{
+				width: 300px;
+				height: 500px;
+				/* box-shadow:10px 10px 10px  #eee; */
+				margin: auto;
+				transition: box-shadow 1s;
+				/* 贝塞尔曲线：P0（0，0）P3（1，1） P1（X,Y） P2(X,Y)*/
+				/* cubic-bezier(0.25,0.1,0.25,1) */
+			}
+			.boxShadow:hover{
+				box-shadow:10px 10px 10px  #eee;
+			}
+			.boxShadowItem{
+				width: 50px;
+				height: 50px;
+				box-shadow: 2px 2px 1px 5px #eee;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 50px;
+				cursor: pointer;
+				user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boxShadow">
+			<div class="boxShadowItem">+=</div>
+		</div>
+	</body>
+</html>
