@@ -67,7 +67,9 @@
 				line-height: 30px;
 				color: white;
 			}
-			
+			.yellow{
+				background-color: yellow !important;
+			}
 			
 		</style>
 	</head>
@@ -75,15 +77,14 @@
 		<div class="slider">
 			<div class="slider-main">
 				<ul>
-					<li><a href="#"><img src="assets/1.jpg" alt=""></a></li>
-					<li><a href="#"><img src="assets/2.jpg" alt=""></a></li>
-					<li><a href="#"><img src="assets/1.jpg" alt=""></a></li>
-					<li><a href="#"><img src="assets/2.jpg" alt=""></a></li>
+					<li class="numlist1"><a href="#"><img src="assets/1.jpg" alt=""></a></li>
+					<li class="numlist1"><a href="#"><img src="assets/2.jpg" alt=""></a></li>
+					<li class="numlist1"><a href="#"><img src="assets/1.jpg" alt=""></a></li>
+					<li class="numlist1"><a href="#"><img src="assets/2.jpg" alt=""></a></li>
 				</ul>
 			</div>
 			<div class="slider-extra">
 				<a href="" class="pre"><</a>
-				
 				<ul>
 					<li class="numlist">1</li>
 					<li class="numlist">2</li>
@@ -93,5 +94,20 @@
 				<a href="" class="next">></a>
 			</div>
 		</div>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			var num = 0;
+			var interval = setInterval(function(){
+					$('.numlist1').hide()
+					$('.numlist1').eq(num).show();
+					$('.numlist').removeClass('yellow')
+					$('.numlist').eq(num).addClass('yellow')
+					if(num>=3){
+						num=-1;
+					}
+					num++;
+			},1000)
+			
+		</script>
 	</body>
 </html>
